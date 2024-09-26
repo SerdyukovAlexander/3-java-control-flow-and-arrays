@@ -13,7 +13,7 @@ public class Task11Main
 
     static void swap(int[] arr)
     {
-        if(arr.length>0 && !Objects.isNull(arr))
+        if(!Objects.isNull(arr) && arr.length>0)
         {
             int minnum = 10 * 10;
             int maxi = 0;
