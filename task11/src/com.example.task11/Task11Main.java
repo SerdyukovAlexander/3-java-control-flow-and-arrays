@@ -1,18 +1,34 @@
 package com.example.task11;
 
-public class Task11Main {
-    public static void main(String[] args) {
-        //здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
-        // например вот так:
-        /*
-        int[] arr = {7, 5, 9};
+import java.util.Objects;
+
+public class Task11Main
+{
+    public static void main(String[] args)
+    {
+        int[] arr = {12, 11, 4, 4, 10, 7, 5, 9};
         swap(arr);
         System.out.println(java.util.Arrays.toString(arr));
-         */
     }
 
-    static void swap(int[] arr) {
-        //todo напишите здесь свою корректную реализацию этого метода, вместо существующей
-    }
+    static void swap(int[] arr)
+    {
+        if(arr.length>0 && !Objects.isNull(arr))
+        {
+            int minnum = 10 * 10;
+            int maxi = 0;
+            int a;
 
+            for (int i = 0; i < arr.length; i++) {
+                if (minnum >= arr[i]) {
+                    minnum = arr[i];
+                    maxi = i;
+                }
+            }
+
+            a = arr[0];
+            arr[0] = arr[maxi];
+            arr[maxi] = a;
+        }
+    }
 }
